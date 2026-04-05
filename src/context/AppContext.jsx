@@ -6,7 +6,7 @@ const AppContext = createContext(null);
 const STORAGE_KEY = 'finance_dashboard_state';
 const DATA_VERSION = 'finance_dashboard_v2';
 
-// Load initial state from localStorage or use defaults
+
 function loadInitialState() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -22,14 +22,14 @@ function loadInitialState() {
       }
     }
   } catch {
-    // Ignore parse errors
+    
   }
 
   return {
     dataVersion: DATA_VERSION,
     transactions: getTransactions(),
-    role: 'admin', // 'admin' or 'viewer'
-    theme: 'light', // 'dark' or 'light'
+    role: 'admin', 
+    theme: 'light', 
     filters: {
       search: '',
       type: 'all',
@@ -39,7 +39,7 @@ function loadInitialState() {
       sortBy: 'date',
       sortOrder: 'desc',
     },
-    currentPage: 'dashboard', // 'dashboard', 'transactions', 'insights'
+    currentPage: 'dashboard', 
     isSidebarCollapsed: false,
   };
 }
@@ -108,21 +108,21 @@ function appReducer(state, action) {
 export function AppProvider({ children }) {
   const [state, dispatch] = useReducer(appReducer, null, loadInitialState);
 
-  // Persist state to localStorage
+  
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     } catch {
-      // Ignore storage errors
+      
     }
   }, [state]);
 
-  // Apply theme to document
+  
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', state.theme);
   }, [state.theme]);
 
-  // Memoized helpers
+  
   const getFilteredTransactions = useCallback(() => {
     let filtered = [...state.transactions];
     const { search, type, category, dateFrom, dateTo, sortBy, sortOrder } = state.filters;

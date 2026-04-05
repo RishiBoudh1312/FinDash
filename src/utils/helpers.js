@@ -25,27 +25,27 @@ export function formatMonth(dateStr) {
 }
 
 export function getMonthKey(dateStr) {
-  return dateStr.substring(0, 7); // YYYY-MM
+  return dateStr.substring(0, 7); 
 }
 
 export function getCategoryColor(category) {
   const colors = {
-    'Food & Dining': '#ff5500', // Neon Orange
-    Shopping: '#8c1eff',        // Electric Purple
-    Transportation: '#00e5ff',  // Neon Cyan
-    Entertainment: '#ff00e6',   // Neon Magenta
-    Healthcare: '#00ff88',      // Neon Green
-    Utilities: '#0055ff',       // Neon Blue
-    Rent: '#ff2a5f',            // Neon Pink
-    Education: '#00ffcc',       // Aquamarine
-    Travel: '#ffaa00',          // Cyber Yellow
-    Subscriptions: '#5500ff',   // Deep Indigo
-    Salary: '#00ff88',          // Neon Green
-    Freelance: '#00e5ff',       // Neon Cyan
-    Investments: '#ffaa00',     // Cyber Yellow
-    Refund: '#a39eb5',          // Muted Silver
-    'Festival Bonus': '#ff00e6',// Neon Magenta
-    Gift: '#ff2a5f',            // Neon Pink
+    'Food & Dining': '#ff5500', 
+    Shopping: '#8c1eff',        
+    Transportation: '#00e5ff',  
+    Entertainment: '#ff00e6',   
+    Healthcare: '#00ff88',      
+    Utilities: '#0055ff',       
+    Rent: '#ff2a5f',            
+    Education: '#00ffcc',       
+    Travel: '#ffaa00',          
+    Subscriptions: '#5500ff',   
+    Salary: '#00ff88',          
+    Freelance: '#00e5ff',       
+    Investments: '#ffaa00',     
+    Refund: '#a39eb5',          
+    'Festival Bonus': '#ff00e6',
+    Gift: '#ff2a5f',            
   };
   return colors[category] || '#94a3b8';
 }

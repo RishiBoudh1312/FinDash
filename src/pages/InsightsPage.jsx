@@ -56,7 +56,7 @@ export default function InsightsPage() {
     const expenses = transactions.filter((t) => t.type === 'expense');
     const incomes = transactions.filter((t) => t.type === 'income');
 
-    // Category breakdown
+    
     const categoryTotals = {};
     expenses.forEach((t) => {
       categoryTotals[t.category] = (categoryTotals[t.category] || 0) + t.amount;
@@ -67,7 +67,7 @@ export default function InsightsPage() {
     const highestCategory = sortedCategories[0] || ['N/A', 0];
     const lowestCategory = sortedCategories[sortedCategories.length - 1] || ['N/A', 0];
 
-    // Monthly data
+    
     const monthlyData = {};
     transactions.forEach((t) => {
       const key = getMonthKey(t.date);
@@ -83,17 +83,17 @@ export default function InsightsPage() {
     const lastMonth = months[months.length - 1];
     const prevMonth = months[months.length - 2];
 
-    // Savings rate
+    
     const totalIncome = incomes.reduce((sum, t) => sum + t.amount, 0);
     const totalExpenses = expenses.reduce((sum, t) => sum + t.amount, 0);
     const savingsRate = totalIncome > 0 ? ((totalIncome - totalExpenses) / totalIncome) * 100 : 0;
 
-    // Average transaction
+    
     const avgExpense = expenses.length > 0
       ? expenses.reduce((sum, t) => sum + t.amount, 0) / expenses.length
       : 0;
 
-    // Largest single transaction
+    
     const largestExpense = expenses.reduce(
       (max, t) => (t.amount > max.amount ? t : max),
       { amount: 0, description: 'N/A' }
@@ -103,7 +103,7 @@ export default function InsightsPage() {
       { amount: 0, description: 'N/A' }
     );
 
-    // Monthly comparison chart data
+    
     const monthlyChartData = months.map(([month, data]) => {
       const d = new Date(month + '-01T00:00:00');
       return {
@@ -114,14 +114,14 @@ export default function InsightsPage() {
       };
     });
 
-    // Category radar data
+    
     const radarData = sortedCategories.slice(0, 6).map(([name, value]) => ({
       category: name.length > 12 ? name.substring(0, 12) + '…' : name,
       amount: Math.round(value),
       fullMark: Math.round(sortedCategories[0][1] * 1.2),
     }));
 
-    // Day-of-week spending
+    
     const daySpending = {};
     const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     expenses.forEach((t) => {

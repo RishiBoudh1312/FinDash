@@ -1,4 +1,4 @@
-// Mock transaction data — India-specific
+
 const categories = {
   expense: [
     'Food & Dining',
@@ -174,8 +174,8 @@ function generateId() {
 
 export function generateTransactions(count = 150) {
   const transactions = [];
-  const startDate = new Date(2025, 6, 1); // July 2025
-  const endDate = new Date(2026, 3, 1);   // April 2026
+  const startDate = new Date(2025, 6, 1); 
+  const endDate = new Date(2026, 3, 1);   
 
   for (let i = 0; i < count; i++) {
     const type = Math.random() > 0.35 ? 'expense' : 'income';
@@ -186,35 +186,35 @@ export function generateTransactions(count = 150) {
     let amount;
     if (type === 'income') {
       if (category === 'Salary') {
-        amount = randomBetween(45000, 120000);    // ₹45k–₹1.2L/month
+        amount = randomBetween(45000, 120000);    
       } else if (category === 'Freelance') {
-        amount = randomBetween(8000, 80000);       // ₹8k–₹80k
+        amount = randomBetween(8000, 80000);       
       } else if (category === 'Investments') {
-        amount = randomBetween(500, 25000);        // ₹500–₹25k
+        amount = randomBetween(500, 25000);        
       } else if (category === 'Festival Bonus') {
-        amount = randomBetween(2000, 20000);       // ₹2k–₹20k
+        amount = randomBetween(2000, 20000);       
       } else {
-        amount = randomBetween(200, 5000);         // Refunds
+        amount = randomBetween(200, 5000);         
       }
     } else {
       if (category === 'Rent') {
-        amount = randomBetween(8000, 35000);       // ₹8k–₹35k
+        amount = randomBetween(8000, 35000);       
       } else if (category === 'Travel') {
-        amount = randomBetween(2000, 25000);       // ₹2k–₹25k
+        amount = randomBetween(2000, 25000);       
       } else if (category === 'Food & Dining') {
-        amount = randomBetween(80, 1500);          // ₹80–₹1500
+        amount = randomBetween(80, 1500);          
       } else if (category === 'Shopping') {
-        amount = randomBetween(300, 12000);        // ₹300–₹12k
+        amount = randomBetween(300, 12000);        
       } else if (category === 'Utilities') {
-        amount = randomBetween(200, 3000);         // ₹200–₹3k
+        amount = randomBetween(200, 3000);         
       } else if (category === 'Healthcare') {
-        amount = randomBetween(200, 5000);         // ₹200–₹5k
+        amount = randomBetween(200, 5000);         
       } else if (category === 'Education') {
-        amount = randomBetween(500, 8000);         // ₹500–₹8k
+        amount = randomBetween(500, 8000);         
       } else if (category === 'Subscriptions') {
-        amount = randomBetween(99, 2000);          // ₹99–₹2k
+        amount = randomBetween(99, 2000);          
       } else if (category === 'Transportation') {
-        amount = randomBetween(50, 2000);          // ₹50–₹2k
+        amount = randomBetween(50, 2000);          
       } else {
         amount = randomBetween(100, 3000);
       }
@@ -230,12 +230,12 @@ export function generateTransactions(count = 150) {
     });
   }
 
-  // Sort by date descending
+  
   transactions.sort((a, b) => new Date(b.date) - new Date(a.date));
   return transactions;
 }
 
-// Pre-generated consistent data for the app (seeded once)
+
 let cachedTransactions = null;
 
 export function getTransactions() {
