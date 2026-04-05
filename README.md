@@ -1,7 +1,7 @@
 <div align="center">
   <br />
   <img src="./public/logo.svg" alt="FinDash Logo" width="80" />
-  <h1>💸 FinDash</h1>
+  <h1>FinDash</h1>
   <p><strong>A Modern, Responsive, & Interactive Personal Finance Dashboard</strong></p>
 
   <p>
@@ -20,7 +20,7 @@
 
 ---
 
-## ✨ Overview
+## Overview
 
 FinDash is a premium, beautifully crafted analytics dashboard built to manage and visualize personal financial activity. 
 Freshly redesigned from the ground up, it features a striking **Cyberpunk Neon aesthetic**, **bottom navigation for mobile users**, **staggered micro-animations**, **ambient floating glow pulses**, and a **customizable light & dark mode**.
@@ -29,19 +29,19 @@ No component libraries. Just pure, clean React and meticulously crafted vanilla 
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
-### 📊 Comprehensive Dashboard
+### Comprehensive Dashboard
 * **Dynamic Summary Cards** – Total Balance, Income, Expenses, and Transaction Count neatly summarized.
 * **Interactive Charts** – Area charts tracking monthly income vs. expenses, and donut charts breaking down category spending using Recharts.
 * **Smart Insights** – Understand your peak spending days, savings rates, and month-over-month growth analytics instantly.
 
-### 💰 Complete Transaction Management
+### Complete Transaction Management
 * **Full CRUD Operations** – Add, edit, or delete personal transactions seamlessly.
 * **Advanced Filtering** – Search text, filter by transaction type, select specific categories, or pick custom date ranges.
 * **One-Click Export** – Export your perfectly filtered data instantly to **CSV** or **JSON**.
 
-### 📱 Responsive & Modern Architecture
+### Responsive & Modern Architecture
 * **True Dynamic Sidebar** – The desktop sidebar features a fully interactive collapse mechanism, smoothly animating from full labels down to quick-icons (260px -> 84px) while perfectly redistributing the main dashboard layout space.
 * **Mobile-First Experience** – The desktop sidebar intelligently hides and transitions into a native app-style bottom navigation bar on mobile devices.
 * **Fluid UI & Ambient Animations** – Every component boasts buttery-smooth interactions, staggered list entries, and a continuous 5-second asynchronous ambient "glow breathing target" animation sequence on cards.
@@ -49,7 +49,7 @@ No component libraries. Just pure, clean React and meticulously crafted vanilla 
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 
 | Layer | Tools Used |
 | :--- | :--- |
@@ -63,7 +63,7 @@ No component libraries. Just pure, clean React and meticulously crafted vanilla 
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### Prerequisites
 Make sure you have Node.js version 18+ installed on your machine.
@@ -72,7 +72,7 @@ Make sure you have Node.js version 18+ installed on your machine.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/Finance-Dashboard.git
+   git clone https://github.com/RishiBoudh1312/FinDash
    cd Finance-Dashboard
    ```
 
@@ -87,7 +87,7 @@ Make sure you have Node.js version 18+ installed on your machine.
    ```
    > The application will automatically be available at `http://localhost:5173/`. 
 
-### 🌐 Live Deployment
+### Live Deployment
 This project is fully configured to host on **GitHub Pages**. 
 To securely compile and push a live deployment online, simply run:
 
@@ -98,7 +98,7 @@ npm run deploy
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 src/
